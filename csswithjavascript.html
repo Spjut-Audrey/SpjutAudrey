@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Manipulating CSS with Javascript Practice</title>
+</head>
+<body>
+    <h1 id="comic">The Heading and the Furious</h1>
+    
+    <h2>2 Heading 2 Furious</h2>
+    
+    <h3>The Heading and the Furious: Tokyo Drift</h3>
+    
+    <h4>Heading &amp; Furious</h4>
+    
+    <h5 >Heading Five</h5>
+    
+    <h6>Heading &amp; Furious 6</h6>
+    
+    <p>Furious 7</p>
+    
+    <br>
+    <p>The paragraph of the Furious</p>
+    
+    <br> 
+    <p id="p2" class="ex1">Elements to Typical Furious Movie</p>
+        <ul >
+            <li id="Cars">Loud car(s)</li>
+            <li>Even more cars</li>
+            <li>Token hot girl</li>
+            <li>Bad scripts</li>
+            <li>Opening a cold one with the boys</li>
+            <li>Action scene "car chase"</li>
+        </ul>
+    
+         <script>
+        document.getElementById('p2').style.color = "blue";
+        
+        function manipElement('p3') {
+            var el = document.getElementById('p3');
+            el.style.color = "red";
+            el.style.fontSize = "15px";
+        }
+        var classManip = document.querySelector('p3');
+        classManip.classList.add("exp1");
+    // can also use .remove to remove a class
+        
+             var myElement = document.querySelector('p3');
+        </script>
+    
+    <button type="button" onclick="document.getElementById('comic').style.fontFamily = 'Comic Sans MS'">Button!</button>
+    
+    <p id="p3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+    
+</body>
+</html>
