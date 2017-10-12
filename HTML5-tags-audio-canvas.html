@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>You can add videos straight into your webpage by using the video tag. Check out this video I took of a geyser in Yellowstone!</p>
+        <video width="400" height="220" controls>
+            <source src="IMG_0779.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>You can also add audio into webpages! Down with flash! Up with more Mo-Tab!</p>
+        <audio controls>
+            <source src="2001-01-0010-the-morning-breaks-instrumental-192k-eng.mp3" type="audio/mp3">
+            Your browser does not support the HTML5 audio tag.
+        </audio>
+        <p>Canvas is here</p>
+        <canvas id="myCanvas" width="300" height="200" style="border: 2px dotted #ff885c;">
+        Your Browser does not support the HTML5 canvas tag.</canvas>
+        
+        <script>
+            var a = document.getElementById("myCanvas");
+            var b = a.getContext("2d")
+            b.font = "50px Times";
+            b.strokeText("Yay Canvas!",10,50);
+        </script>
+    </body>
+</html>
