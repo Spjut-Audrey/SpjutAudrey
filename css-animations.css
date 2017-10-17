@@ -1,0 +1,59 @@
+
+#slide {
+    animation-duration: 5s;
+    animation-name: slidein;
+    animation-iteration-count: 3;
+    //animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+    
+    75% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+}
+    
+    to {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@keyframes colorChange {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+div {
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 20px;
+    width: 50%;
+    height: auto;
+    background-color: red;
+    animation-name: colorChange;
+    animation-duration: 4s;
+}
+    
+@keyframes colors {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+#color {
+    padding: 20px 20px 20px 20px;
+    width: 50%;
+    height: auto;
+    background-color: red;
+    animation-name: colors;
+    animation-duration: 4s;
+    
+}
