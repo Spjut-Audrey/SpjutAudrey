@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS Transitions</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body onload="">
+        <h1>Defining, Designing, and Triggering CSS Transitions with JavaScript</h1>
+        <section class="defining">
+            <h2>Defining</h2> 
+            <p>In CSS3 you can use transitions to transition through different property values. Generally accepted through all browsers, although using -webkit and -moz is recommended.</p>
+            
+            <p>Hover this box to see transitions in action!</p>
+        </section>
+        <section class="designing">
+            <h2>Designing</h2>
+            <p>To create a CSS transition you need to include several different items. You'll need to create a css property (the one you'd like to change with the transistion) and you'll need to specify the duration of the transition. </p>
+            
+            <p>If you hover of this box it does something cool too!</p>
+        </section>
+        <section class="triggering">
+            <h2>Triggering with Javascript</h2>
+            <p>There are cool ways to use these transitions and trigger them using Javascript! Here is an example below.</p>
+
+            <button id="btb" onclick="classChange()">Click here!</button>
+            <p>You'll notice the button above, it calls a function using the onclick attribute to toggle from one CSS class and transition to another class.</p>
+        </section>
+        <section class="transitionBox" id="tranBox">
+            <p>I am a box and I exist only to get used by Javascript and contain no important information about transitions.</p>
+        </section>
+        
+        <script src="js/main.js"></script>
+    </body>
+</html>
