@@ -4,10 +4,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="javascript-events.css">
-        <script src="javascript-events.js"></script>
         <title>JavaScript with Events</title>
     </head>
-    <body onload="dateFunc()">
+    <body onload="dateFunc()" onafterprint="printFunc()">
         <div id="listEvents">
             <h3>Using JavaScript in Events</h3>
             <p>How to trigger&#58;</p>
@@ -90,13 +89,44 @@
                 <button onclick="mouseClick()" id="clickButton">Onclick example!</button>
             <h4>Keyboard Event</h4>
                 <input type="text" id="keybEvent">
-            <script type="text/javascript">document.getElementById("keybEvent").onkeypress = function() {boardEvent()};
-
-                function boardEvent() {
-                    document.getElementById("keybEvent").style.backgroundColor = " blue";
-}           </script>
+                <script type="text/javascript">document.getElementById("keybEvent").onkeypress = function() {boardEvent()};
+                    function boardEvent() {
+                        document.getElementById("keybEvent").style.backgroundColor = " blue";
+    }           </script>
             <h4>Frame/Object Event</h4>
-            <p>Inspect body element to see onload of the date function! Today's date is: <span id="currentdate"></span></p>
+                <p>Inspect body element to see onload of the date function! Today's date is: <span id="currentdate"></span>.</p>
+            <h4>Form Event</h4>
+                <form onsubmit="return numFunc()">
+                    Addition: input two numbers to get sum.
+                    <input type="text" id="numOne"> +
+                    <input type="text" id="numTwo">
+                    <input type="submit">
+                </form>
+                <span id="sumSpan"></span>
+            <h4>Drag Event</h4>
+                <p>Drag not supported in IE 8 and Safari 5.1 and earlier.<span id="drop"></span></p>
+                <div class="dropDrag" ondrop="drop(event)" ondragover="allowDrop(event)"><p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag this to the other square!</p></div>
+                <div class="dropDrag" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <h4>Clipboard Events</h4>
+                <input type="text" oncopy="copyFunc()" value="Copy this text">
+                <p id="copyText"></p>
+                <input type="text" onpaste="pasteFunc()" value="Time">
+                <p id="pasteText"></p>
+            <h4>Print Events</h4>
+                <p>Onafterprint not supported with Chrome, Safari, or Opera.</p>
+                <p>Try to print page!</p>
+                <p id="printBox"></p>
+            <h4>Media Events</h4> 
+                <video id="snapVid" width="200" height="200" controls onplay="mediaFunc()">
+                    <source src="MOVIE.mp4" type="video/mp4">
+                </video>
+            <h4>Animation Events</h4>
+                <div id="aniDiv" onclick="aniFunc()"></div>
+            <h4>Transition Events</h4>
+                <p>Not supported IE 9 &amp; earlier.</p>
+                <div id="tranEvent"></div>
+            <h4>Touch Events</h4>
+                <div id="touchBox"></div>
         </div>
         
         <div id="broSup">
@@ -126,5 +156,6 @@
                 </ul>
             <a href="caniuse.com/#search=touch">Source - Can I Use</a>
         </div>
+           <script src="javascript-events.js"></script>
     </body>
 </html>
