@@ -7,7 +7,7 @@
         <script src="javascript-events.js"></script>
         <title>JavaScript with Events</title>
     </head>
-    <body>
+    <body onload="dateFunc()">
         <div id="listEvents">
             <h3>Using JavaScript in Events</h3>
             <p>How to trigger&#58;</p>
@@ -95,6 +95,8 @@
                 function boardEvent() {
                     document.getElementById("keybEvent").style.backgroundColor = " blue";
 }           </script>
+            <h4>Frame/Object Event</h4>
+            <p>Inspect body element to see onload of the date function! Today's date is:<span id="currentdate"></span></p>
         </div>
         
         <div id="broSup">
