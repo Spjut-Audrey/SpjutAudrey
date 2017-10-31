@@ -31,5 +31,5 @@ function dateFunc() {
 
     var n = weekday[d.getDay()] + ", " +d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear();
 
-    return n;
+    document.getElementById("currentdate").innerHTML = n;
 }
