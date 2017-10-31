@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/main.css">
+        <script src="script/javascript-events.js"></script>
+        <title>JavaScript Events</title>
+    </head>
+    <body>
+        <div id="listEvents">
+            <h3>Using JavaScript Events</h3>
+            <p>How to trigger&#58;</p>
+                <ul>
+                    <li>Mouse Events
+                        <ul>
+                            <li>onlick</li>
+                            <li>ondblclick</li>
+                            <li>onmouseover</li>
+                        </ul>
+                    </li>
+                    <li>Keyboard Events
+                        <ul>
+                            <li>onkeypress</li>
+                        </ul>
+                    </li>
+                    <li>Frame/objet Events
+                        <ul>
+                            <li>onload</li>
+                            <li>onresize</li>
+                            <li>onscroll</li>
+                        </ul>
+                    </li>
+                    <li>Form Events
+                        <ul>
+                            <li>onfocus</li>
+                            <li>oninput</li>
+                            <li>onsubmit</li>
+                        </ul>
+                    </li>
+                    <li>Drag Events
+                        <ul>
+                            <li>ondrag</li>
+                            <li>ondrop</li>
+                        </ul>
+                    </li>
+                    <li>Clipboard Events
+                        <ul>
+                            <li>oncopy</li>
+                            <li>onpaste</li>
+                        </ul>
+                    </li>
+                    <li>Print Events
+                        <ul>
+                            <li>onafterprint</li>
+                            <li>onbeforeprint</li>
+                        </ul>
+                    </li>
+                    <li>Media Events
+                        <ul>
+                            <li>onplay</li>
+                            <li>onpause</li>
+                            <li>onwaiting</li>
+                        </ul>
+                    </li>
+                    <li>Animation Events
+                        <ul>
+                            <li>animationend</li>
+                            <li>animationiteration</li>
+                            <li>animationstart</li>
+                        </ul>
+                    </li>
+                    <li>Transition Events
+                        <ul>
+                            <li>transitionend</li>
+                        </ul>
+                    </li>
+                    <li>Touch Events
+                        <ul>
+                            <li>ontouchstart // end</li>
+                            <li>ontouchmove</li>
+                        </ul>
+                    </li>
+                </ul>
+        </div>
+        
+        <div id="examples">
+            <h3>Examples</h3>
+            <h4>Mouse Event</h4>
+                <button onclick="mouseClick()" id="clickButton">Onclick example!</button>
+            <h4>Keyboard Event</h4>
+                <input type="text" id="keybEvent">
+            <script type="text/javascript">document.getElementById("keybEvent").onkeypress = function() {boardEvent()};
+
+                function boardEvent() {
+                    document.getElementById("keybEvent").style.backgroundColor = " blue";
+}           </script>
+        </div>
+        
+        <div id="broSup">
+            <h3>Touch Events Browser Support</h3>
+            <p>General Support for Touch events&#58;</p>
+                <ul>
+                    <li>FireFox</li>
+                    <li>Chrome</li>
+                    <li>Opera</li>
+                    <li>iOS Safari</li>
+                    <li>Android Browser</li>
+                    <li>Chrome &#40;Android&#41;</li>
+                </ul>
+            <p>Not Supported&#58;</p>
+                <ul>
+                    <li>IE</li>
+                    <li>Edge <ul>
+                        <li>Can be enabled using "about:flags"</li>
+                    </ul></li>
+                    <li>Safari</li>
+                    <li>Opera Mini</li>
+                </ul>
+            <p>Important to know&#58;</p>
+                <ul>
+                    <li>Android 2.3 and below - no multi-touch support</li>
+                    <li>Most browsers don't completely support all touch events. Chrome v65 and Opera v50 have 100&#37; support.</li>
+                </ul>
+            <a href="caniuse.com/#search=touch">Source - Can I Use</a>
+        </div>
+    </body>
+</html>
