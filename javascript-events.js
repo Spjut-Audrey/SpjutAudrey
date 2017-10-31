@@ -127,6 +127,7 @@ function startup() {
   el.addEventListener("touchmove", handleMove, false);
   log("initialized.");
 }
+var ongoingTouches = [];
 
 function handleStart(evt) {
   evt.preventDefault();
