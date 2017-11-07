@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <meta author="Audrey Spjut">
+        <title>CSS Transforms</title>
+        <link href="css-transforms.css" rel="stylesheet">
+        <script src="css-transforms.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <h2>CSS Transforms</h2>
+        <p>It's fun to play with and easy to create using CSS. This page shows the different things you can do with CSS Transforms.</p>
+        
+        <div class="transBox" id="trans"><button onclick="tranTog()">Change translate!</button>Translating can use different planes. TranslateX-Z are a few ways to use this. &#40;transform: translate&#40;30px,10px&#41;; used on this&#41;</div>
+        
+        <div class="scaleBox" id="scale"><button onclick="scaleTog()">Change scale!</button>You can scale the boxes you transform using the same types of planes similar to translating. &#40;transform: scaleY&#40;.65&#41;; used on this div.&#41;</div>
+        
+        <div class="rotateBox" id="rotate"><button onclick="rotateTog()">Change rotate!</button>Rotating is a little different. Use angles&#40;deg&#41; to to specify how much you want it to rotate. X-Z is also applicable. &#40;transform: rotateX&#40;180deg&#41;;&#41; used.</div>
+        
+        <div class="skewBox" id="skew"><button onclick="skewTog()">Change skew!</button>Skew is similar to rotating in that it also uses angles and planes. &#40;transform: skewX&#40;30deg&#41;;&#41; used.</div>
+    </body>
+</html>

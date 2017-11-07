@@ -1,0 +1,59 @@
+body {
+    background-color: cadetblue;
+}
+
+div {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.transBox {
+    -mox-transform: translate(30px,10px);
+    -webkit-transform: translate(30px,10px);
+    transform: translate(30px,10px);
+}
+.changeTrans {
+    -mox-transform: translate(10px,20px);
+    -webkit-transform: translate(10px,20px);
+    transform: translate(10px,20px);
+}
+
+.scaleBox {
+    -moz-transform: scaleY(.65);
+    -webkit-transform: scaleY(.65);
+    transform: scaleY(.65); 
+}
+
+.changeScale {
+    -moz-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1); 
+}
+
+.rotateBox {
+    -moz-transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
+.changeRotate {
+     -moz-transform: rotateX(342deg);
+    -webkit-transform: rotateX(342deg);
+    transform: rotateX(342deg);
+}
+
+.skewBox {
+    -moz-transform: skewX(30deg);
+    -webkit-transform: skewX(30deg);
+    transform: skewX(30deg);
+}
+
+.changeSkew {
+    -moz-transform: skewX(50deg);
+    -webkit-transform: skewX(50deg);
+    transform: skewX(50deg);
+}
