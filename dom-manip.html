@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>DOM Manipulation</title>
+        <link rel="stylesheet" href="dom-manip.css">
+    </head>
+    <body>
+        <h1>DOM Manipulation</h1>
+        <div id="parent">I am a parent.
+            <div id="child1">I am Child One</div>
+            <div id="child2">I am Child Two</div>
+            <div id="child3">I am Child Three</div>
+        </div>
+        <div id="orphan">I am an Orphan</div>
+        
+        <button onclick="moveOrphan()">Click to Append Orphan</button>
+        <button onclick="moveBefore()">Click to Insert Orphan</button>
+        <button onclick="removeOrphan()">Click to Remove Orphan</button>
+        <button onclick="createDiv()">Click to Add Div</button>
+        
+        <script src="dom-manip.js"></script>
+    </body>
+</html>
