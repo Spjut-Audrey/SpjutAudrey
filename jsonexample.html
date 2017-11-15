@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="utf-8">
+        <title>JSON examples</title>
+    </head>
+    <body>
+        <h1>JSON examples</h1>
+        
+        <div id="example">HELLO I AM HERE TO MAKE SURE THIS IS WORKING</div>
+        
+        <script>
+            
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                }
+            };
+            xmlhttp.open ("GET", "https://jsonplaceholder.typicode.com/posts", true);
+            xmlhttp.send();
+        </script>
+    
+    </body>
+</html>
