@@ -10,12 +10,23 @@
         <div id="example">HELLO I AM HERE TO MAKE SURE THIS IS WORKING</div>
         
         <script>
+            function createDiv(post) {
+                var newD = document.createElement('div');
+                var newText = document.createTextNode(post.title + " : " + post.body);
+                newD.appendChild(newText);
+
+                var oldDiv = document.getElementById('example');
+                document.body.insertBefore(newD, oldDiv);
+            }
             
             var xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     var myObj = JSON.parse(this.responseText);
                     
+                    for (var i = 0; i < myObj.length; i++) {
+                        createDiv(myObj[i]);
+                    }
                     document.getElementById("example").innerHTML = myObj[0].body;
                 }
             };
