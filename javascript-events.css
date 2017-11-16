@@ -54,3 +54,8 @@ div {
     width: 300px;
     height: 200px;
 }
+
+#log {
+    max-height: 100px;
+    overflow: scroll;
+}
