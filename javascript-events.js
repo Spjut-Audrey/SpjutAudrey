@@ -119,6 +119,10 @@ function tranFunc() {
 }
 
 //work on this more!
+function log(message) {
+    document.getElementById("log").innerHTML = message;
+}
+
 function startup() {
   var el = document.getElementsByTagName("canvas")[0];
   el.addEventListener("touchstart", handleStart, false);
