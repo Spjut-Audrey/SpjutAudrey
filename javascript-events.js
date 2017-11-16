@@ -144,7 +144,9 @@ function ongoingTouchIndexById (touchId) {
             return i;
     }
 }
-
+function copyTouch(touch) {
+    return { identifier: touch.identifier, pageX: touch.pageX, pageY: touch.pageY };
+}
 function handleStart(evt) {
   evt.preventDefault();
   log("touchstart.");
