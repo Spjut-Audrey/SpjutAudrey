@@ -119,9 +119,10 @@ function tranFunc() {
 }
 
 //work on this more!
-function log(message) {
-    document.getElementById("log").innerHTML = message;
-}
+function log(msg) {
+    var p = document.getElementById('log');
+    p.innerHTML = msg + "\n" + p.innerHTML;
+  }
 
 function startup() {
   var el = document.getElementsByTagName("canvas")[0];
