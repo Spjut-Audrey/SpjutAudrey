@@ -135,6 +135,16 @@ function startup() {
 function colorForTouch (touch) {
     return "#1b1b1b";
 }
+
+ongoingTouches = new Array(0);
+
+function ongoingTouchIndexById (touchId) {
+    for (var i = 0; i < ongoingTouches.length; i++) {
+        if (ongoingTouches[i].identifier == touchId)
+            return i;
+    }
+}
+
 function handleStart(evt) {
   evt.preventDefault();
   log("touchstart.");
