@@ -132,6 +132,9 @@ function startup() {
   log("initialized.");
 }
 
+function colorForTouch (touch) {
+    return "#1b1b1b";
+}
 function handleStart(evt) {
   evt.preventDefault();
   log("touchstart.");
