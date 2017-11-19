@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Storage and Arrays</title>
+    </head>
+    <body>
+        <h1>Storage and Arrays</h1>
+
+        <script>
+            function localCount() {
+                if(typeof(Storage) !== "undefined") {
+                    if (localStorage.clickcount) {
+                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                    } else {
+                        localStorage.clickcount = 1;
+                    }
+
+                    document.getElementById("local").innerHTML = "Button has been clicked" + localStorage.clickcount + " times!";
+                } else {
+                    document.getElementById("local").innerHTML = "Dang. Your browser doesn't support web storage! :("
+                }
+            }
+
+            function sessionCount() {
+                if(typeof(Storage) !== "undefined") {
+                    if (sessionStorage.clickcount) {
+                        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                    } else {
+                        sessionStorage.clickcount = 1;
+                    }
+
+                    document.getElementById("session").innerHTML = "Button has been clicked" + sessionStorage.clickcount + " times!";
+                } else {
+                    document.getElementById("session").innerHTML = "Dang. Your browser doesn't support web storage! :("
+                }
+            }
+            }
+        </script>
+        <button onclick="localCount()" type="button">Click for Local Storage!</button>
+        <p id="local"></p>
+        <button onclick="sessionCount()" type="button">Click for Session Storage</button>
+        <p id="session"></p>
+    </body>
+</html>
