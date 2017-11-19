@@ -11,7 +11,7 @@
             function localCount() {
                 if(typeof(Storage) !== "undefined") {
                     if (localStorage.clickcount) {
-                        localStorage.clickcount = Number(localStorage.clickcount)+1;
+                        localStorage.clickcount = Number(localStorage.clickcount) + 1;
                     } else {
                         localStorage.clickcount = 1;
                     }
@@ -25,7 +25,7 @@
             function sessionCount() {
                 if(typeof(Storage) !== "undefined") {
                     if (sessionStorage.clickcount) {
-                        sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+                        sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
                     } else {
                         sessionStorage.clickcount = 1;
                     }
