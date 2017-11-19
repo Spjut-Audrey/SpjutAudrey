@@ -6,46 +6,6 @@
     </head>
     <body>
         <h1>Storage and Arrays</h1>
-
-        <script>
-            function localCount() {
-                if(typeof(Storage) !== "undefined") {
-                    if (localStorage.clickcount) {
-                        localStorage.clickcount = Number(localStorage.clickcount) + 1;
-                    } else {
-                        localStorage.clickcount = 1;
-                    }
-
-                    document.getElementById("local").innerHTML = "Button has been clicked " + localStorage.clickcount + " times!";
-                } else {
-                    document.getElementById("local").innerHTML = "Dang. Your browser doesn't support web storage! :("
-                }
-            }
-
-            function sessionCount() {
-                if(typeof(Storage) !== "undefined") {
-                    if (sessionStorage.clickcount) {
-                        sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
-                    } else {
-                        sessionStorage.clickcount = 1;
-                    }
-
-                    document.getElementById("session").innerHTML = "Button has been clicked " + sessionStorage.clickcount + " times!";
-                } else {
-                    document.getElementById("session").innerHTML = "Dang. Your browser doesn't support web storage! :("
-                }
-            }
-
-            var arrayOne = [1, 2, 5, 2, 6, 7, 8]
-                for (var i = arrayOne; i <=10; i++) {
-                    document.getElementById("arrayP").innerHTML = i;
-                }
-
-            function sortArray (arrayOne) {
-                arrayOne.sort(function(a, b){return b - a});
-                document.getElementById("arrayP").innerHTML= arrayOne;
-            }
-        </script>
         <div>
             <h2>Storage</h2>
             <button onclick="localCount()" type="button">Click for Local Storage!</button>
@@ -56,7 +16,45 @@
          <div>
              <h2>Arrays</h2>
              <button onclick="sortArray(arrayOne)" type="button">Click here to sort the array!</button>
-             <p="arrayP"></p>
+             <p id="arrayP"></p>
+            
          </div>
+         <script>
+                function localCount() {
+                    if(typeof(Storage) !== "undefined") {
+                        if (localStorage.clickcount) {
+                            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+                        } else {
+                            localStorage.clickcount = 1;
+                        }
+    
+                        document.getElementById("local").innerHTML = "Button has been clicked " + localStorage.clickcount + " times!";
+                    } else {
+                        document.getElementById("local").innerHTML = "Dang. Your browser doesn't support web storage! :("
+                    }
+                }
+    
+                function sessionCount() {
+                    if(typeof(Storage) !== "undefined") {
+                        if (sessionStorage.clickcount) {
+                            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+                        } else {
+                            sessionStorage.clickcount = 1;
+                        }
+    
+                        document.getElementById("session").innerHTML = "Button has been clicked " + sessionStorage.clickcount + " times!";
+                    } else {
+                        document.getElementById("session").innerHTML = "Dang. Your browser doesn't support web storage! :("
+                    }
+                }
+    
+                var arrayOne = [5, 2, 10, 2, 6, 7, 8, 50, 51, 23, 1];
+                        document.getElementById("arrayP").innerHTML = arrayOne;
+    
+                function sortArray (arrayOne) {
+                    arrayOne.sort(function(a, b){return a - b});
+                    document.getElementById("arrayP").innerHTML= arrayOne;
+                }
+            </script>
     </body>
 </html>
