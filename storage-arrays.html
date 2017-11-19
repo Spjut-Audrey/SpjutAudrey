@@ -38,8 +38,10 @@
 
             var arrayOne = [1, 2, 3, 4, 5, 7, 8]
             document.getElementById("arrayP").innerHTML = arrayOne;
+
             function sortArray (arrayOne) {
-                arrayOne.sort();
+                arrayOne.sort(function(a, b){return b - a});
+                document.getElementById("arrayP").innerHTML = arrayOne;
             }
         </script>
         <div>
