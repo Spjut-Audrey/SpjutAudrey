@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objects and more</title>
+    </head>
+    <body>
+        <h1>Objects Creation, Inheritance, Methods, Instantiation</h1>
+        <h2>Object creation</h2>
+            <p id="obj"></p>
+        <h2>Inheritance</h2>
+            <p>Inheritance in JS is through properties and methods from their prototype. Inheriting from code is: <span id="inherit"></span> </p>
+        <h2>Methods</h2>
+            <p><button onclick="methodName()" type="button">Click me</button><span id="methodBox"></span></p>
+        <h2>Instantiation</h2>
+            <p>Check code and alert.</p>
+        <script>
+            var hp = new Object();
+            hp.firstName = "Harry";
+            hp.lastName = "Potter";
+            hp.eyeColor = "Green";
+            hp.hairColor = "Black";
+
+            document.getElementById("obj").innerHTML = hp.firstName + " " + hp.lastName + " is the chosen one. His eyes are " + hp.eyeColor + " and his hair is " + hp.hairColor + ".";
+
+            
+
+            var inheritArr = [1, 34, 5, 6, 645, 2466626];
+            document.getElementById("inherit").innerHTML = ( inheritArr instanceof Array);
+
+            var greeting = "yo. what's up?";
+
+            var methodName = function() {document.getElementById("methodBox").innerHTML = greeting.toUpperCase()};
+
+            function person(age, height, weight) {
+                this.age = age;
+                this.height = height;
+                this.weight = weight;
+                this.greeting = function() {alert(age + " " + height + " " + weight);}
+            }
+            
+            var ben = new person(2, 5, 66);
+            ben.greeting();
+
+        </script>
+    </body>
+</html>
