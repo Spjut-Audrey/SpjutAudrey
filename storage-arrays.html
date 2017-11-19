@@ -35,10 +35,24 @@
                     document.getElementById("session").innerHTML = "Dang. Your browser doesn't support web storage! :("
                 }
             }
+
+            var arrayOne = [1, 2, 3, 4, 5, 7, 8]
+            document.getElementById("arrayP").innerHTML = arrayOne;
+            function sortArray (arrayOne) {
+                arrayOne.sort();
+            }
         </script>
-        <button onclick="localCount()" type="button">Click for Local Storage!</button>
-        <p id="local"></p>
-        <button onclick="sessionCount()" type="button">Click for Session Storage</button>
-        <p id="session"></p>
+        <div>
+            <h2>Storage</h2>
+            <button onclick="localCount()" type="button">Click for Local Storage!</button>
+            <p id="local"></p>
+            <button onclick="sessionCount()" type="button">Click for Session Storage</button>
+            <p id="session"></p> 
+         </div>
+         <div>
+             <h2>Arrays</h2>
+             <button onclick="sortArray(arrayOne)" type="button">Click here to sort the array!</button>
+             <p="arrayP"></p>
+         </div>
     </body>
 </html>
