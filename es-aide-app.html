@@ -6,17 +6,75 @@
         <title></title>
         <meta name="author" content="Audrey Spjut">
         <meta name="description" content="A webpage for ward members or the executive secretary to come in and make various appointments with the bishopric of that ward.">
-        <!-- <link href="" rel="stylesheet"> -->
+        <link href="es-aide-app.css" rel="stylesheet">
     </head>
-    <body>
+    <body onload="displayCalendar()">
         <header>
             <h1>TITLE HERE</h1>
             <!-- logo? -->
         </header>
         <main>
-            <div class="hidden"><!-- Form here --></div>
+            <div id="formDiv" class="hidden"><!-- Form here -->
+                <form>
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <label>
+                            <span>Full Name:</span>
+                            <input name="fullName" type="text" pattern="[a-zA-Z -._]{min, 5}" required>
+                        </label>
+                        <label>
+                            <span>Email:</span>
+                            <input name="email" type="email" placeholder="name@website.com" required>
+                        </label>
+                        <label>
+                            <span>Phone Number:</span>
+                            <input name="phone" type="tel">
+                        </label>
+                        <label>
+                            <span>Prefer Text or Call?</span>
+                            <input type="radio" name="txtCall" value="text" checked>
+                            <input type="radio" name="txtCall" value="call">
+                        </label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Meeting Information</legend>
+                        <label>
+                            <span>Reason for Meeting</span>
+                            <select name="reason">
+                                <option value="choose" disabled selected>Please Choose</option>
+                                <option value="other">Other</option>
+                                <option value="tithing">Tithing Settlement</option>
+                                <option value="temple">Temple Recommend Renewal</option>
+                                <option value="youth">Youth Interview</option>
+                                <option value="interview" >Interview</option>
+                                <option value="baptism">Baptismal Interview</option>
+                                <option value="ppi">PPI</option>
+                                <option value="priestAdv">Priesthood Advancement</option>
+                                <option value="getToKnow">Getting to Know You</option>
+                                <option value="counsel">Counseling</option>
+                                <option value="calling">Calling</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Who Would You like to Meet With?</span>
+                            <select name="bishopric">
+                                <option value="ben">Bishop Ben Franklin</option>
+                                <option value="ryland">Ryland Pigg (1st Counselor)</option>
+                                <option value="jeff">Jeffrey Harmon (2nd Counselor)</option>
+                            </select>
+                        </label>
+                        <label>
+                            <span>Select a Time:</span>
+                            <select name="time">
+                                
+                            </select>
+                        </label>
+                    </fieldset>
+                    <input type="submit" value="Submit" onclick="buttonPress()">
+                </form>
+            </div>
             <div class="instruc"><!-- Instructions here --></div>
-            <div class="calendar"><!-- Calendar here --></div>
+            <div class="calendar" onclick="calClick()"><!-- Calendar here --></div>
             <div class="legend"><!-- legend here --></div>
         </main>
     </body>

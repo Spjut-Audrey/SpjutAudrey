@@ -1,0 +1,20 @@
+/*** CSS HERE ***/
+
+/* universal  */
+
+/* header */
+
+/* body */
+
+/* main */
+
+.hidden {
+    /* hide form until calendar day click */
+    display: hidden;
+}
+
+.show {
+    /* show form since calendar day click */
+    
+}
+/* footer */
