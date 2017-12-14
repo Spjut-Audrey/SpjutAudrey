@@ -3,14 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title></title>
+        <title>Bishopric Scheduling App</title>
         <meta name="author" content="Audrey Spjut">
         <meta name="description" content="A webpage for ward members or the executive secretary to come in and make various appointments with the bishopric of that ward.">
         <link href="es-aide-app.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
     </head>
-    <body onload="displayCalendar()">
+    <body>
         <header>
-            <h1>TITLE HERE</h1>
+            <h1>Bishopric Scheduling App</h1>
             <!-- logo? -->
         </header>
         <main>
@@ -28,7 +29,7 @@
                         </label>
                         <label>
                             <span>Phone Number:</span>
-                            <input name="phone" type="tel">
+                            <input name="phone" type="tel" placeholder="(123)456-7890">
                         </label>
                         <label>
                             <span>Prefer Text or Call?</span>
@@ -57,7 +58,7 @@
                         </label>
                         <label>
                             <span>Who Would You like to Meet With?</span>
-                            <select name="bishopric">
+                            <select name="bishopric" required>
                                 <option value="ben">Bishop Ben Franklin</option>
                                 <option value="ryland">Ryland Pigg (1st Counselor)</option>
                                 <option value="jeff">Jeffrey Harmon (2nd Counselor)</option>
@@ -66,20 +67,96 @@
                         <label>
                             <span>Select a Time:</span>
                             <select name="time">
-                                
+                                <option id="timeHolder"></option>
                             </select>
                         </label>
                     </fieldset>
-                    <input type="submit" value="Submit" onclick="buttonPress()">
+                    <input type="submit" value="Submit" id="submit" onclick="buttonPress()">
                 </form>
             </div>
-            <div class="instruc"><!-- Instructions here --></div>
-            <div class="calendar" onclick="calClick()"><!-- Calendar here --></div>
-            <div class="legend"><!-- legend here --></div>
+            <div id="instruc">
+                <h2>Click the day on the calendar that you'd like to have your meeting!</h2>
+            </div>
+
+            <!-- Insert Calendar here - use Google Calendar API? -->
+            <div class="calendar" onclick="calClick()">
+                    <table border=3 cellspacing=3 cellpadding=3> 
+                            <tr>
+                            <td colspan="7" align=center><B>December 2017</B></td> 
+                            </tr>
+                            <tr> 
+                            </tr>
+                            <tr> 
+                            <td align=center>Sun</td>
+                            <td align=center>Mon</td>
+                            <td align=center>Tue</td>
+                            <td align=center>Wed</td>
+                            <td align=center>Thu</td>
+                            <td align=center>Fri</td>
+                            <td align=center>Sat</td>
+                            </tr>
+                            <tr> 
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center>1</td>
+                            <td align=center>2</td>
+                            </tr>
+                            <tr> 
+                            <td align=center>3</td>
+                            <td align=center>4</td>
+                            <td align=center>5</td>
+                            <td align=center>6</td>
+                            <td align=center>7</td>
+                            <td align=center>8</td>
+                            <td align=center>9</td>
+                            </tr>
+                            <tr> 
+                            <td align=center>10</td>
+                            <td align=center>11</td>
+                            <td align=center>12</td>
+                            <td align=center>13</td>
+                            <td align=center>14</td>
+                            <td align=center>15</td>
+                            <td align=center>16</td>
+                            </tr>
+                            <tr> 
+                            <td align=center>17</td>
+                            <td align=center>18</td>
+                            <td align=center>19</td>
+                            <td align=center>20</td>
+                            <td align=center>21</td>
+                            <td align=center>22</td>
+                            <td align=center>23</td>
+                            </tr>
+                            <tr> 
+                            <td align=center>24</td>
+                            <td align=center>25</td>
+                            <td align=center>26</td>
+                            <td align=center>27</td>
+                            <td align=center>28</td>
+                            <td align=center>29</td>
+                            <td align=center>30</td>
+                            </tr>
+                            <tr> 
+                            <td align=center>31</td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            <td align=center></td>
+                            
+                            </tr>
+                            </table>
+            </div>
+            <!-- <div class="legend">legend here</div> -->
         </main>
     </body>
     <footer>
         <p>Audrey Spjut Copyright &copy; 2017</p>
     </footer>
-    <!-- <script src=""></script> -->
+    <script src="es-aide-app.js"></script>
 </html>

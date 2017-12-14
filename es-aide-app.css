@@ -1,20 +1,100 @@
 /*** CSS HERE ***/
 
 /* universal  */
+* { 
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
 
 /* header */
+header {
+    background-color: #552f9b;
+    padding: 20px 20px 20px 20px;
+    margin-top: -10px;
+    width: 100%;
+}
 
 /* body */
 
+body {
+    font-family: "Arimo", sans-serif;
+}
+
 /* main */
+
+/* form - gets more specific as code goes on*/
 
 .hidden {
     /* hide form until calendar day click */
-    display: hidden;
+    visibility: hidden;
 }
 
-.show {
-    /* show form since calendar day click */
-    
+form {
+    border: 2px solid #552f9b;
+    border-radius: 5px;
+    max-width: 550px;
+    margin: 30px 5px 10px 30px;
+    float: left;
 }
+
+#formDiv {
+    max-width: 555px;
+}
+
+fieldset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+fieldset > label{
+    align-content: left;
+    display: block;
+    padding: 5px 5px 5px 5px;
+
+}
+
+legend {
+    font-weight: bold;
+}
+
+span {
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+/* Table */
+
+table {
+    position: relative;
+    margin-right: 6px;
+    width: 800px;
+    height: 500px;
+    top: 9%;
+    right: -20%;
+}
+
+td:hover {
+    background-color: lightgoldenrodyellow;
+}
+
+td.selected {
+    background-color: lightgreen;
+}
+
 /* footer */
+footer {
+    color: white;
+    text-align: center;
+    background-color: #552f9b;
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
