@@ -2,7 +2,7 @@ function calClick() {
     // change class from hidden  to show so the form for people to submit
     if (document.getElementById("formDiv").className = ".hidden") {
         document.getElementById("formDiv").classList.remove(".hidden");
-        document.getElementById("instruc").classList.add(".hidden");
+        document.getElementById("instruc").classList.add("hidden");
 
     }
 }
@@ -15,7 +15,7 @@ function buttonPress() {
 var dayTimes = ["8:30am", "12:30pm", "12:40pm", "12:50pm", "1:00pm", "1:10pm", "1:20pm", "1:30pm", "1:40pm", "1:50pm"];
 var nightArray = ["7:10", "7:20", "7:30", "7:40", "7:50", "8:00", "8:10", "8:20", "8:30", "8:40", "8:50"];
 
-var nightTimes = nightArray + "pm";
+var nightTimes = nightArray;// + "pm" added in loop;
 
 
 
@@ -28,4 +28,30 @@ for(var i = 0; i < trs.length; i++){
         }
         this.className += " selected";
     });
+}
+
+// input class change onkeypress to light yellow
+    document.getElementsByTagName("input").onkeypress = function(){boardEvent()};
+        function boardEvent() {
+            document.getElementsByTagName("input").style.backgroundColor = " lightyellow";
+        }
+
+//dom manip for arrays into time form
+
+for(var i = 0; i < dayTimes.length; i++ ){
+    var timeOption = document.createElement("option");
+
+    timeOption.innerHTML = dayTimes[i];
+    timeOption.value = dayTimes[i];
+
+    document.getElementsByName("time")[0].appendChild(timeOption);
+}
+
+for(var i = 0; i < nightTimes.length; i++ ){
+    var timeOption = document.createElement("option");
+
+    timeOption.innerHTML = nightTimes[i] + "pm";
+    timeOption.value = nightTimes[i];
+
+    document.getElementsByName("time")[0].appendChild(timeOption);
 }

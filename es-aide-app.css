@@ -5,7 +5,7 @@
     margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     color: white;
 }
 
@@ -25,6 +25,13 @@ body {
 }
 
 /* main */
+
+.instrucBox {
+    float: left;
+    text-align: left;
+    width: 507px;
+    background-color: white;
+}
 
 /* form - gets more specific as code goes on*/
 
@@ -67,6 +74,10 @@ span {
     padding-bottom: 5px;
 }
 
+.hoverInput {
+    background-color: lightyellow;
+}
+
 
 
 /* Table */
@@ -86,6 +97,17 @@ td:hover {
 
 td.selected {
     background-color: lightgreen;
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-animation: colorChange .5s;
+    -moz-animation: colorChange .5s;
+    animation: colorChange .5s;
+}
+
+@keyframes colorChange {
+    from {background-color: lightyellow;}
+    to {background-color: lightgreen;}
 }
 
 /* footer */
