@@ -65,10 +65,12 @@ function buttonPress() {
     var displayTime = localStorage.setItem('timeValue', time.value);
     var displayPerson = localStorage.setItem('personValue', person.value);
     
-    JSON.stringify(displayTime, displayPerson);
+    alert(JSON.stringify(displayTime, displayPerson);)
+    
+   
+    document.getElementById('output').innerHTML = formInfo;
     
     // thank user for submitting their form
-    document.getElementById('output').innerHTML = formInfo;
-
+    alert("Thank you for submitting your meeting request!");
     return false;
 }
