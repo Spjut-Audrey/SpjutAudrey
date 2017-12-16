@@ -51,16 +51,23 @@ for(var i = 0; i < nightTimes.length; i++ ){
     document.getElementsByName("time")[0].appendChild(timeOption);
 }
 
-// storage for JSON (attempt)
+//Get loval storage for JSON (attempt)
 
 // get info first from onclick of submit button
 
-
+//after stored show results in "output" div
 function buttonPress() {
-    // thank user for submitting their form
     var formInfo = document.getElementById('form');
+    var time = document.getElementById('timeValue');
+    var person = document.getElementById('personValue');
     alert("Thank you for submitting your meeting request!");
-
+    
+    var displayTime = localStorage.setItem('timeValue', time.value);
+    var displayPerson = localStorage.setItem('personValue', person.value);
+    
+    JSON.stringify(displayTime, displayPerson);
+    
+    // thank user for submitting their form
     document.getElementById('output').innerHTML = formInfo;
 
     return false;
