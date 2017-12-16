@@ -19,7 +19,7 @@
                 <h2>Click the day on the calendar that you'd like to have your meeting!</h2>
             </div>
             <div id="formDiv" class="hidden"><!-- Form here -->
-                <form>
+                <form id="form">
                     <fieldset>
                         <legend>Contact Information</legend>
                         <label>
@@ -74,7 +74,7 @@
                             </select>
                         </label>
                     </fieldset>
-                    <input type="submit" value="Submit" id="submit" onclick="buttonPress()">
+                    <input type="button" value="Submit" id="submit" onclick="buttonPress()">
                 </form>
             </div>
             
@@ -153,7 +153,7 @@
                             </tr>
                             </table>
             </div>
-            <!-- <div class="legend">legend here</div> -->
+            <div id="output"></div>
         </main>
     </body>
     <footer>

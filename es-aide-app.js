@@ -7,11 +7,6 @@ function calClick() {
     }
 }
 
-function buttonPress() {
-    // thank user for submitting their form
-    alert("Thank you for submitting your meeting request!");
-}
-
 var dayTimes = ["8:30am", "12:30pm", "12:40pm", "12:50pm", "1:00pm", "1:10pm", "1:20pm", "1:30pm", "1:40pm", "1:50pm"];
 var nightArray = ["7:10", "7:20", "7:30", "7:40", "7:50", "8:00", "8:10", "8:20", "8:30", "8:40", "8:50"];
 
@@ -54,4 +49,19 @@ for(var i = 0; i < nightTimes.length; i++ ){
     timeOption.value = nightTimes[i];
 
     document.getElementsByName("time")[0].appendChild(timeOption);
+}
+
+// storage for JSON (attempt)
+
+// get info first from onclick of submit button
+
+
+function buttonPress() {
+    // thank user for submitting their form
+    var formInfo = document.getElementById('form');
+    alert("Thank you for submitting your meeting request!");
+
+    document.getElementById('output').innerHTML = formInfo;
+
+    return false;
 }
